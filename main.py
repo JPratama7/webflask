@@ -15,5 +15,3 @@ def homepage():
     kota = location['city']
     return render_template('index.html', ip = ip, negara = negara, kota = kota)
     
-if __name__ == '__main__':
-    app.run(debug=True)
