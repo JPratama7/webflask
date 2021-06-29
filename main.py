@@ -8,10 +8,12 @@ app = Flask(__name__)
 
 
 @app.route("/")
+@app.route("/index")
 def homepage():
     ip = ipget()
     location = geolocation(ip)
     negara = location['country_name']
     kota = location['city']
-    return render_template('index.html', ip = ip, negara = negara, kota = kota)
+    return "WELKOM TO MAI WEBSITE"
+    #return render_template('index.html', ip = ip, negara = negara, kota = kota)
     
