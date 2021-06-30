@@ -14,6 +14,5 @@ def homepage():
     location = geolocation(ip)
     negara = location['country_name']
     kota = location['city']
-    return "WELKOM TO MAI WEBSITE"
-    #return render_template('index.html', ip = ip, negara = negara, kota = kota)
+    return render_template('index.html', ip = ip, negara = negara, kota = kota)
     
