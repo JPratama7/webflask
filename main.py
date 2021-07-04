@@ -7,12 +7,14 @@ app = Flask(__name__)
 
 
 
-@app.route("/")
+@app.route("/heh")
 @app.route("/index")
 def homepage():
-    ip = ipget()
-    location = geolocation(ip)
-    negara = location['country_name']
-    kota = location['city']
-    return render_template('index.html', ip = ip, negara = negara, kota = kota)
-    
+    return render_template('index.html')
+
+@app.route("/")
+def test():
+    return render_template('tUGAS.html',)
+
+if __name__ == '__main__':
+    app.run(debug=True)

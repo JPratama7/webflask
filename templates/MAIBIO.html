@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .contener{
+            border: solid;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<script>
+    alert("WELKOM TO MAI BIOGRAPY")
+    alert("SUPRISE MADAFAKA")
+</script>
+<body>
+    <button class="tablink" onclick="openPage('foto', this, 'red')" id="defaultOpen">Foto</button>
+    <button class="tablink" onclick="openPage('crita', this, 'green')">Cerita Hidup</button>  
+    <div id="foto" class="tabcontent">
+        <h3>Foto diri boei</h3>
+        <img class="contener" src="1.jpg" width="200" height="300" style="margin: auto; display: block;">
+    </div>
+    
+    <div id="crita" class="tabcontent">
+        <h3>Cerita Hidup</h3>
+        <p class="contener">Nama saya Jose Chasey Pratama, saya dari Kota Palu, Sulawesi Tengah. Saya tinggal di jalan Veteran no. 14 Tanamodindi, Mantikulore, Palu, Sulawesi Tengah Saya lahir pada tanggal 12 Oktober 2002 di Palu.
+        Saya memiliki seorang adik bernama Michael Yunus Dwinugroho. Ayah Saya bernama Kasiman dan bekerja sebagai PNS, sedangkan ibu saya bernama Sihotang Sipriyani dan berkerja sebagai Ibu Rumah Tangga. untuk pendidikan dasar saya
+        bersekolah di SD Tanamodindi, kemudian saya melanjutkan ke SMP Model Terpadu Madani Palu selama 3 tahun, dan melanjutkan lagi ke SMA Model Terpadu Madani Palu hingga lulus.</p>
+    </div>
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+    
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>

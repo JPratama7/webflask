@@ -1,12 +1,14 @@
 from flask import jsonify
 from flask import request
 from flask import jsonify
-import geoip2
 import requests
+
 
 def ipget():
     return request.remote_addr
 
 def geolocation(ip):
-    response = requests.get("https://geolocation-db.com/json/{ip}&position=true".format(ip = ip)).json()
+    response = requests.get(f"https://geolocation-db.com/json/{ip}&position=true".json())
+    print(response)
     return response
+
